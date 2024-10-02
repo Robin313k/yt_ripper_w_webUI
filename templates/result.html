@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+	    color: #ff0000;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+	    color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Download Result</h1>
+        <div class="result">{{ result }}</div>
+	<p>If you got an error, just try it again and it should work :)</p>
+        <a href="{{ url_for('home') }}">Go back to download another video</a>
+    </div>
+</body>
+</html>
+
