@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import os
 import yt_dlp  # Ensure yt-dlp is installed
-import time
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Required for using session
@@ -9,9 +8,6 @@ app.secret_key = 'supersecretkey'  # Required for using session
 # Function to download the YouTube video
 def download_video(url):
     try:
-        # Simulate a delay to represent download time
-        time.sleep(5)
-
         # Set up YouTube download options
         ydl_opts = {
             'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save location
